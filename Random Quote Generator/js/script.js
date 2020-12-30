@@ -6,38 +6,31 @@ var quotes = [
 	{
 	quote: 'Long live the rose that grew from concrete when no one else even cared.',
 	author: '2Pac',
-
 	},
-
 	{
 	quote: 'Believe it!',
 	author: 'Naruto',
 	citation: 'Naruto',
 	year: 2007
 	},
-
 	{
 	quote: 'Humility isnt thinking less of yourself, it is thinking of yourself less',
 	author: 'Felix Arvid Ulf Kjellberg',
 	citation: 'Pewdiepie',
 	year: 2016
-  },
-  
+  	},
 	{
     quote: 'Ruh oh',
     author: 'Scooby Doo',
     citation: 'Scooby Doo, Where Are You!',
     year: 1969
     },
-
     {
-      quote: 'Ich bin ein Berliner',
-      author: 'JFK',
-      citation: 'West Berlin Speech',
-      year: 1963
-      }
-
-
+    quote: 'Ich bin ein Berliner',
+    author: 'JFK',
+    citation: 'West Berlin Speech',
+    year: 1963
+    }
 ]
 
 
@@ -51,11 +44,9 @@ function getRandomQuote() {
   let a = Math.floor(Math.random()*quotes.length);
   console.log(a);
   return quotes[a];
-
 }
 
 console.log(getRandomQuote());
-
 
 /***
  * `printQuote` function
