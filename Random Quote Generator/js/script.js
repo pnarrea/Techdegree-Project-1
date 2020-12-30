@@ -40,15 +40,10 @@ var quotes = [
 
 ]
 
-/* for (i=0; i<quotes.length; i++){
-
-console.log(quotes[i].quote)
-
-} */
 
 /***
  * `getRandomQuote` function
- * returns the quote object that corresponds to the random number generated 
+ * This function returns the quote object that corresponds to the random number generated 
  * number shall be between 0 and 1 minus the # of objects in the array
 ***/
 
@@ -64,11 +59,17 @@ console.log(getRandomQuote());
 
 /***
  * `printQuote` function
+ * This function uses the getRandomQuote function and inserts the contents of the object into the html file.
+ * It stores the quote and author into a variable as a string with the first <p> tags 
+ * (intentionally leaving out the last </p> tag)
+ * 
+ * then appends the necessary other portions of the object as they appear in the object between <span>,</span> tags 
+ * finally appending the final </p> tag when all parts of the object have been accounted for
 ***/
 
 function printQuote() {
 	quote = getRandomQuote();
-	html = `<p class = "quote">${quote.quote}</p> <p class="source"> ${quote.source} `;
+	html = `<p class = "quote">${quote.quote}</p> <p class="source"> ${quote.author} `;
 	
 	if (quote.citation != null) {
 		html +=  `<span class="citation"> ${quote.citation} </span>`;
@@ -88,7 +89,7 @@ function printQuote() {
 
 /***
  * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
+ * Changes the quote that appears on the screen via a button "show another quote" and the functions above
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
