@@ -1,50 +1,40 @@
-/******************************************
-Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
-******************************************/
-
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
-
 /*** 
- * `quotes` array 
+ * Quotes array containing quotes and availble information on their source. 
 ***/
 
 var quotes = [
 	{
-	quote: 'These bitches',
-	author: 'that one guy',
-	citation: 'church',
-	year: 2004
+	quote: 'Long live the rose that grew from concrete when no one else even cared.',
+	author: '2Pac',
+
 	},
 
 	{
-	quote: 'Some other people',
-	author: 'albert rudolph',
-	citation: 'books',
-	year: 1993
+	quote: 'Believe it!',
+	author: 'Naruto',
+	citation: 'Naruto',
+	year: 2007
 	},
 
 	{
-	quote: 'Humility isnt thinking less of oneself',
-	author: 'pewdiepie',
-	citation: 'bridge',
-	year: 1980
+	quote: 'Humility isnt thinking less of yourself, it is thinking of yourself less',
+	author: 'Felix Arvid Ulf Kjellberg',
+	citation: 'Pewdiepie',
+	year: 2016
   },
   
 	{
     quote: 'Ruh oh',
-    author: 'scooby doo',
-    citation: 'cartoon',
-    year: 1980
+    author: 'Scooby Doo',
+    citation: 'Scooby Doo, Where Are You!',
+    year: 1969
     },
 
     {
-      quote: 'First we make our habits then they make us',
-      author: 'someone',
-      citation: 'unknown',
-      
+      quote: 'Ich bin ein Berliner',
+      author: 'JFK',
+      citation: 'West Berlin Speech',
+      year: 1963
       }
 
 
@@ -58,6 +48,8 @@ console.log(quotes[i].quote)
 
 /***
  * `getRandomQuote` function
+ * returns the quote object that corresponds to the random number generated 
+ * number shall be between 0 and 1 minus the # of objects in the array
 ***/
 
 function getRandomQuote() {
